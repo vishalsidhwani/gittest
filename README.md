@@ -22,29 +22,19 @@ A step by step series of examples that tell you how to get a development env run
 
 
 ```
-Open Command Prompt and move to the folder where you want to checkout travel win repository. Run below command to clone the repo to your local if not already done.
+1. Open Command Prompt and move to the folder where you want to checkout travel win repository. Run below command to clone the repo to your local if not already done.
 git clone https://github.com/TravelWin/TravelWinRepo.git
-```
-
-```
-Open Sql Server Management studio and connect to localhost\sqlexpress. Open "New Query Window" and select database "SIMulatorDB" and execute query 
+2. Open Sql Server Management studio and connect to localhost\sqlexpress. Open "New Query Window" and select database "SIMulatorDB" and execute query 
 "update AspnetUsers set Email = 'type in you email here', PasswordHash = 'ALXUC9yVauOaI+uUFRhtEXOTzQYdrJZHUJT8atnXyXNfZ7eCx/VluorWZiRQX8HPsw==' where Email = 'kerrie.mcgarvey@travelwin.com'". 
 Now these credentials can be used to login to Simulator Configuration Web App. Your password to login is "abc12345#"
-```
-
-```
-Open Project Src\Platform\Tools\Cryptography.WinUI\Cryptography.WinUI.sln in visual studio and run the project. Select "Simulator Database" in dropdown.
+3. Open Project Src\Platform\Tools\Cryptography.WinUI\Cryptography.WinUI.sln in visual studio and run the project. Select "Simulator Database" in dropdown.
 Put your mac address in "ENTER DATA TO ENCRYPT" field (Without spaces and hashes) and click on encrypt button. Open file "SimSLCM-Add-MacAddres.sql".
 Go to line 26 and replace it with this "SET @clientDeviceName = 'test.simpos.yournamehere-work';" (replace yournamehere with your name)
 Go to line 35 and replace it with "SET @encryptedMacAddress = 'put your encrypted mac address here';"
 Save the file open in SQL Server Management Studio and select "SIMulatorDB" and execute it.
-```
-
-```
-Open the solution "TravelWinRepo\Src\SIMulator\Api.WebApi\SIMulator.WebApi.sln" in visual studio expand folder "Application Layer" right click on "SIMulator.WebAPI" project and select Set as Startup Project.
+4. Open the solution "TravelWinRepo\Src\SIMulator\Api.WebApi\SIMulator.WebApi.sln" in visual studio expand folder "Application Layer" right click on "SIMulator.WebAPI" project and select Set as Startup Project.
 Run the project. You must run this project inorder to run the Configuration Web App.
-
-Open the solution "TravelWinRepo\Src\SIMulator\ConfigurationManager.WebUi\SIMulator.ConfigurationManager.WebUi.sln"
+5. Open the solution "TravelWinRepo\Src\SIMulator\ConfigurationManager.WebUi\SIMulator.ConfigurationManager.WebUi.sln"
 Run the project. 
 
 Login with your email address and abc12345# password.
