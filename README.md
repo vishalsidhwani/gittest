@@ -1,4 +1,4 @@
-# Simulator Configuration API
+# Simulator Configuration APP
 
 This project contains all the UI Code for SimLocal Web App
 
